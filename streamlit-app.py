@@ -85,8 +85,7 @@ def prediksi_gambar(image_pil, model):
     img_resized = image_pil.resize((img_width, img_height))
     img_array = np.array(img_resized, dtype=np.float32)
     
-    # Penambahan normalisasi agar akurasi AI terjaga
-    img_array = img_array / 255.0 
+    # Pembagian / 255.0 sudah dihapus sesuai kebutuhan model
     
     img_array = np.expand_dims(img_array, axis=0)
 
